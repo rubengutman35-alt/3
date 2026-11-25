@@ -1,0 +1,35 @@
+@media (max-width: 900px) {
+    .layout-wrapper {
+        flex-direction: column;
+    }
+
+    .cards-grid {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        min-width: 45%;
+    }
+}
+@media (max-width: 600px) {
+    .main-header {
+        padding: 15px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .main-nav a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .layout-wrapper {
+        padding: 15px;
+    }
+
+    .cards-grid {
+        flex-direction: column;
+    }
+}

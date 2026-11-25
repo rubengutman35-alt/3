@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Sistema de Ventas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="productos">
+    <header class="main-header">
+        <div class="brand">
+            <img src="../img/logo.png" alt="Logo Control Ventas" class="brand-logo" onerror="this.style.display='none'">
+            <span class="logo">Control Ventas</span>
+        </div>
+        <button id="btnCerrarSesion" class="btn-logout">Cerrar Sesión</button>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="productos.html" class="active">Productos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+        </ul>
+    </nav>
+
+    <div class="layout-wrapper">
+        <main class="main-content">
+            <section class="form-section">
+                <h2>Registrar Nuevo Producto</h2>
+                <form id="formProducto" class="inline-form" novalidate>
+                    <div class="form-group">
+                        <label for="prodNombre">Nombre del producto</label>
+                        <input type="text" id="prodNombre" placeholder="Ej. Audífonos Gamer">
+                    </div>
+                    <div class="form-group">
+                        <label for="prodCategoria">Categoría</label>
+                        <select id="prodCategoria">
+                            <option value="Periféricos">Periféricos</option>
+                            <option value="Monitores">Monitores</option>
+                            <option value="Accesorios">Accesorios</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="prodPrecio">Precio (Bs.)</label>
+                        <input type="number" id="prodPrecio" step="0.50" min="1" placeholder="150">
+                    </div>
+                    <div class="form-group">
+                        <label for="prodStock">Stock</label>
+                        <input type="number" id="prodStock" min="1" placeholder="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="prodImagen">Imagen en img/</label>
+                        <select id="prodImagen">
+                            <option value="../img/teclado.jpg">teclado.jpg</option>
+                            <option value="../img/mouse.jpg">mouse.jpg</option>
+                            <option value="../img/monitor.jpg">monitor.jpg</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Agregar Producto</button>
+                    </div>
+                </form>
+                <p id="msgProducto" class="feedback-msg"></p>
+            </section>
+
+            <section>
+                <div class="section-header-flex">
+                    <h2>Catálogo de Productos</h2>
+                    <input type="search" id="buscarProducto" class="search-input" placeholder="Buscar producto o categoría...">
+                </div>
+                <div id="gridProductos" class="cards-grid"></div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section class="aside-box">
+                <h3>Venta Rápida</h3>
+                <p class="aside-desc">Selecciona un cliente y haz clic en <strong>Vender (1 ud.)</strong> en cualquier tarjeta del catálogo.</p>
+                <div class="form-group">
+                    <label for="clienteVentaSelect">Cliente para la venta:</label>
+                    <select id="clienteVentaSelect"></select>
+                </div>
+                <p id="msgVentaRapida" class="feedback-msg"></p>
+            </section>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Sistema de Ventas - Instituto Tecnológico Bolivia Mar</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
